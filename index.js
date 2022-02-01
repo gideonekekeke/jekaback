@@ -12,7 +12,6 @@ const DB_ONLINE =
 const app = express();
 
 app.use(express.json());
-app.use(cors());
 
 mongoose
 	.connect(DB_ONLINE, {
@@ -28,7 +27,7 @@ mongoose
 app.get("/", (req, res) => {
 	res.json("my api is ready to work");
 });
-
+app.use(cors());
 app.use("/api", require("./Router"));
 
 app.listen(port, () => {

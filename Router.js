@@ -34,7 +34,7 @@ router.get("/user/:id", async (req, res) => {
 	}
 });
 
-router.post("/user", async (req, res) => {
+router.post("/users", async (req, res) => {
 	const SendingData = await allUsers.create({
 		first_name: req.body.first_name,
 		last_name: req.body.last_name,
