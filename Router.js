@@ -40,9 +40,9 @@ router.post("/user", async (req, res) => {
 		last_name: req.body.last_name,
 		username: req.body.username,
 		data_of_birth: req.body.data_of_birth,
-		name_prefix:
-			req.body.first_name.charAt(0).toUpperCase() +
-			req.body.last_name.charAt(0).toUpperCase(),
+		// name_prefix:
+		// 	req.body.first_name.charAt(0).toUpperCase() +
+		// 	req.body.last_name.charAt(0).toUpperCase(),
 	});
 	try {
 		res.status(201).json({
