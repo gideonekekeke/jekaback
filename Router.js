@@ -3,7 +3,7 @@ const router = express.Router();
 const allUsers = require("./ModelSchema");
 
 //getting all the files
-router.get("/users", async (req, res) => {
+router.get("/user", async (req, res) => {
 	const AllData = await allUsers.find();
 	try {
 		res.status(200).json({
