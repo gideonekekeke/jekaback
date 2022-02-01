@@ -11,8 +11,14 @@ const DB_ONLINE =
 
 const app = express();
 
+const corsOptions = {
+	origin: "http://localhost:4000",
+	credentials: true, //access-control-allow-credentials:true
+	optionSuccessStatus: 200,
+};
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 mongoose
 	.connect(DB_ONLINE, {
