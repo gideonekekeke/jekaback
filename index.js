@@ -11,15 +11,8 @@ const DB_ONLINE =
 
 const app = express();
 
-const corsOptions = {
-	origin: "https://jekabacks.vercel.app",
-	preflightContinue: true,
-	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-	credentials: true,
-};
-
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 mongoose
 	.connect(DB_ONLINE, {
