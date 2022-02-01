@@ -12,9 +12,10 @@ const DB_ONLINE =
 const app = express();
 
 const corsOptions = {
-	origin: "http://localhost:4000",
-	credentials: true, //access-control-allow-credentials:true
-	optionSuccessStatus: 200,
+	origin: "https://jekabacks.vercel.app",
+	preflightContinue: true,
+	methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+	credentials: true,
 };
 
 app.use(express.json());
